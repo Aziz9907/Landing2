@@ -28,8 +28,8 @@
 
 
   let isImage1 = true;
-  const playButtonSvg = '/icons/play-button.svg';
-  const pauseButtonSvg = '/icons/pause-button.svg';
+  const playButtonSvg = 'icons/play-button.svg';
+  const pauseButtonSvg = 'icons/pause-button.svg';
 
 
     document.getElementById("playButton").onclick = function() {
