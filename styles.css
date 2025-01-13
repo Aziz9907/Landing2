@@ -1,0 +1,494 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url(/fonts/Lato-Bold.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(/fonts/OpenSans/OpenSans-Regular.woff2) format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+        --color-black: #000000;
+        --color-grey: #8E8B8C;
+        --color-white: #FFFFFF;
+
+        --main-content-padding-x: 18%;
+        --container-padding-x: 35px;
+
+        --font-family-base: 'Lato', sans-serif;
+        --font-family-accent: 'Open Sans', sans-serif;
+
+        --transition-duration: 0.3s;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: var(--font-family-base);
+    color: var(--color-black);
+    margin: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: var(--color-black);
+    transition-duration: var(--transition-duration);
+}
+
+a:hover {
+    color: var(--color-grey);
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    height: 900px;
+    padding-top: 1.5%;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-inline: 46px;
+    background: transparent;
+}
+
+.header-menu-list {
+    display: flex;
+    column-gap: 35px;
+}
+
+.header-menu-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.is-current {
+    border-bottom: 2px solid var(--color-black);
+}
+
+.is-current:hover {
+    border-bottom-color: var(--color-grey);
+}
+
+.header-menu-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 38px;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    padding: 2px 0px 2px 0;
+    gap: 6px;
+    background: none;
+    border: none;
+}
+
+.search-button svg {
+    width: 15px;
+    height: 21px;
+}
+
+.header-catalog {
+
+    background: none;
+    border: none;
+
+}
+
+.button-catalog {
+    width: 25px;
+    height: 25px;
+
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.banner {
+    padding-inline: var(--main-content-padding-x);
+}
+
+.banner-body {
+    padding-top: 100px;
+}
+
+.banner-title {
+    font-size: 95px;
+}
+
+.available-style {
+    font-family: var(--font-family-accent);
+    margin: 15px 0 50px 0;
+    font-size: 20px;
+}
+
+.podcast-link {
+    text-decoration: none;
+    background: transparent; border: none;
+}
+.img-apple-soundcast {
+    vertical-align: middle;
+    margin-right: 16.5px;
+}
+.img-spotify-soundcast {
+    vertical-align: middle;
+    margin-left: 16.5px;
+}
+
+.timmy-mike-podcast {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.timmy-mike-podcast-body {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    width: 1300px;
+    height: 291px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 2px #D8D3D2;
+}
+
+.timmy-mike-podcast-body-pos {
+    position: relative;
+    top: 140px;
+    left: 0;
+}
+
+.timmy-mike-photo {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.timmy-mike-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 35px 52px 33px 48px;
+}
+
+.timmy-mike-header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.timmy-mike-header-content-title-subtitle {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.timmy-mike-header-content-subtitle {
+
+    color: var(--color-grey);
+}
+
+.timmy-mike-header-content-title {
+    font-size: 38px;
+}
+
+.timmy-mike-episode-page {
+    font-family: var(--font-family-base);
+    font-size: 14px;
+    font-weight: 700;
+    column-gap: 11px;
+    display: flex;
+    height: 25px;
+    padding: 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+        .shape {
+            position: relative;
+            top: 4px;
+            left: 0;
+            width: 19px;
+            height: 19px;
+            background-image: url(/icons/grey-arrow-right.png);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.shape {
+    width: 19px;
+    height: 13px;
+    background-image: url(/icons/black-arrow-right.png);
+    background-repeat: no-repeat;
+}
+
+.timmy-mike-episode-page:hover {
+    color: var(--color-grey);
+}
+
+.audio-block {
+    position: relative;
+    top: 50px;
+    left: 32px;
+}
+
+audio {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: -72px;
+    padding: 10px 10px 25px 10px;
+    width: 100%;
+    height: 70px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--color-white);
+}
+
+audio::-webkit-media-controls-play-button {
+    -webkit-appearance: none;
+}
+
+audio::-webkit-media-controls-play-button {
+    cursor: default;
+    background-color: var(--color-white);
+}
+
+audio::-webkit-media-controls-current-time-display {
+    order: 1;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    order: 1;
+}
+
+.playButton {
+    background-color: var(--color-white);
+    border: 2px solid #CECECE;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+    top: -45px;
+    left: -50px;
+    padding: 0;
+    margin: 0;
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: var(--color-white);
+    border: 2px solid #CECECE;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    box-shadow: 0 0 5px 0.5px;
+}
+
+.shape-play-button {
+    vertical-align: middle;
+}
+
+.playButton:hover {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    box-shadow: 0 0 5px 0.5px;
+}
+
+.forwardButton, .backButton {
+    color: var(--color-grey);
+    padding: 0;
+    background: none;
+    border: none;
+    position: relative;
+    top: -50px;
+    left: -45px;
+    cursor: pointer;
+}
+
+.forwardButton:hover, .backButton:hover {
+    color: var(--color-black);
+}
+
+.playButtonSvg {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    padding: 10px 11.5px 11.5px 11.5px;
+}
+
+.content {
+    padding-inline: var(--main-content-padding-x);
+    margin: 300px 0 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-text-block-header-title {
+    font-size: 50px;
+
+}
+
+.container-text-block-header {
+    display: flex;
+    column-gap: 21px;
+    margin-bottom: 29px;
+}
+.container-text-block-header-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 115px;
+    
+}
+
+.container-text-block-header-category-child:last-child {
+    color: var(--color-grey);
+}
+
+.container-text-block-main-text {
+    font-family: var(--font-family-accent);
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    width: 520px;
+    text-wrap: pretty;
+    margin-bottom: 31px;
+}
+
+.container-img-block {
+    position: relative;
+}
+
+.new-episode {
+    z-index: -1;
+    color: #F8F8F8;
+    font-size: 92px;
+    font-weight: 500;
+    height: 28px;
+    width: 529px;
+    position: absolute;
+    top: 91%;
+    left: -10%;
+    text-wrap: nowrap;
+    transform: rotate(180deg);
+    writing-mode: tb-rl;
+}
