@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Lato', sans-serif;
-    src: url(/fonts/Lato-Bold.woff2) format('woff2');
+    src: url(fonts/Lato-Bold.woff2) format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Open Sans', sans-serif;
-    src: url(/fonts/OpenSans/OpenSans-Regular.woff2) format('woff2');
+    src: url(fonts/OpenSans/OpenSans-Regular.woff2) format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -61,10 +61,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
-    font-family: var(--font-family-base);
-    color: var(--color-black);
-    margin: 0;
+    	line-height: 1;
+    	font-family: var(--font-family-base);
+    	color: var(--color-black);
+    	margin: 0;
 }
 ol, ul {
 	list-style: none;
